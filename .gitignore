@@ -3,8 +3,8 @@ node_modules
 npm-debug.log
 
 # Typescript.
-app/*.js
-app/*.js.map
-
+app/app.component.js
+app/app.js.map
+app/app.module.js
 # Atom.
 .atomignore
