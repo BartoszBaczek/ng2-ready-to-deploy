@@ -1,12 +1,12 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
-import { AnotherComponent } from './another.component';
+import { SimpleComponent } from './src/simple.component';
 
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, AnotherComponent ],
+  declarations: [ AppComponent, SimpleComponent ],
   bootstrap:    [ AppComponent ]
 })
 

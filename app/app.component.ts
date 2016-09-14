@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { AnotherComponent } from './another.component';
+import { SimpleComponent } from './src/simple.component';
 
 @Component({
   selector: 'my-app',
   template: `<div>How does star component look like</div>
-             <another-component></another-component>`
+             <simple-component></simple-component>`
 })
 
 export class AppComponent {
