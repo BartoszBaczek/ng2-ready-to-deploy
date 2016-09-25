@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { SimpleComponent } from './src/simple.component';
+import { DraggableRedComponent } from './samples/draggableRed.component';
 
 @Component({
   selector: 'my-app',
-  template: `<div>How does star component look like</div>
+  template: `<div>Simple component below:</div>
              <simple-component></simple-component>`
 })
 
 export class AppComponent {
 
-    constructor() {
-        let abba: number = 90;
-    }
+    constructor() { }
 }

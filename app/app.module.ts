@@ -1,12 +1,12 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
-import { SimpleComponent } from './src/simple.component';
-
+import { DraggableRedComponent } from './samples/draggableRed.component';
+import { DraggableDirective } from './lib/draggable.directive';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, SimpleComponent ],
+  declarations: [ AppComponent, DraggableRedComponent, DraggableDirective ],
   bootstrap:    [ AppComponent ]
 })
 
