@@ -5,6 +5,8 @@ npm-debug.log
 # Typescript.
 app/*.js
 app/*.js.map
+app/*/*.js
+app/*/*.js.map
 
 # Atom.
 .atomignore
