@@ -2,11 +2,12 @@
 node_modules
 npm-debug.log
 
-# Typescript.
+# Typescript.app/app.module.js.map
 app/*.js
 app/*.js.map
 app/**/*.js
 app/**/*.js.map
+app
 
 # Atom.
 .atomignore
