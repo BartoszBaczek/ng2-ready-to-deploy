@@ -1,13 +1,8 @@
-import { Directive, ElementRef, Renderer, OnInit, OnDestroy, Inject  } from '@angular/core';
+import { Directive, ElementRef, Renderer, OnInit, OnDestroy, Inject, HostListener  } from '@angular/core';
 import { IDraggable } from '../interfaces/draggable.interface';
 
 @Directive({
     selector: '[draggable]',
-    host: {
-        '(drag)': 'onDrag($event)',
-        '(dragend)': 'onDragEnd($event)',
-        '(dragstart)': 'onDragStart($event)'
-    }
 })
 export class DraggableDirective {
 
@@ -35,21 +30,26 @@ export class DraggableDirective {
         }
     }
 
-    private onDragStart(event: MouseEvent) {
-
-        for (let o of this.dragObservers) {
-            o.onDragStart(event);
-        }
-    }
-
-    private onDrag(event: MouseEvent) {
+    @HostListener('drag', ['$event'])
+    onDrag(event: DragEvent) {
 
         for (let o of this.dragObservers) {
             o.onDrag(event);
         }
     }
 
-    private onDragEnd(event: MouseEvent) {
+    @HostListener('dragstart', ['$event'])
+    onDragStart(event: DragEvent) {
+
+        event.stopPropagation();
+
+        for (let o of this.dragObservers) {
+            o.onDragStart(event);
+        }
+    }
+
+    @HostListener('dragend', ['$event'])
+    onDragEnd(event: DragEvent) {
 
         for (let o of this.dragObservers) {
             o.onDragEnd(event);
