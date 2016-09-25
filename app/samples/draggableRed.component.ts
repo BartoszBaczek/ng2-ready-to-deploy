@@ -4,13 +4,13 @@ import { DraggableDirective } from '../lib/draggable.directive';
 
 @Component({
   selector: 'draggable-red',
-  template: `<div draggable class="simple-component">
+  template: `<div draggable class="red-component">
                 <div>Simple component</div>
             </div>`,
-  styles: [`.simple-component {
+  styles: [`.red-component {
                 width: 100px;
                 height: 100px;
-                background-color: yellow;
+                background-color: red;
             }`]
 })
 
