@@ -13,7 +13,10 @@ export class DraggableDirective {
 
     private dragObservers: Array<IDraggable>;
 
-    constructor(@Inject(ElementRef) private elementRef: ElementRef, @Inject(Renderer) private renderer: Renderer) { }
+    constructor(@Inject(ElementRef) private elementRef: ElementRef, @Inject(Renderer) private renderer: Renderer) {
+
+        this.dragObservers = new Array<IDraggable>();
+    }
 
     ngOnInit() {
 
@@ -27,7 +30,7 @@ export class DraggableDirective {
 
     subscribeToDragEvents(observer: IDraggable) {
 
-        if (this.dragObservers.indexOf(observer) > -1) {    // contains??
+        if (this.dragObservers.indexOf(observer) <= -1) {    // contains??
             this.dragObservers.push(observer);
         }
     }
